@@ -1,0 +1,1623 @@
+* {
+  box-sizing: border-box;
+}
+
+.frame8 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 2px solid #ced4da;
+  border-radius: 8px;
+  width: 375px;
+  height: 3007px;
+  overflow: hidden;
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    align-self: stretch;
+    margin-right: -4px;
+    background: #edf4fa;
+
+    .frame {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      overflow: hidden;
+    }
+
+    .div3 {
+      display: flex;
+      align-items: flex-start;
+      align-self: stretch;
+      justify-content: space-between;
+      border-width: 0px 0px 1px;
+      border-style: solid;
+      border-color: #f3f4f6;
+      box-shadow: 0px 1px 2px 0px #0000000d;
+      background: #ffffff;
+      padding: 16px;
+      min-width: 375px;
+
+      .parteXIcone26 {
+        margin-top: 6px;
+        width: 131px;
+        height: 38px;
+      }
+
+      .div2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #00000000;
+        width: 90px;
+        min-width: 90px;
+        height: 52px;
+
+        .svg {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 12px;
+          background: #00000000;
+          padding-top: 16px;
+          padding-bottom: 18px;
+          width: 42px;
+        }
+
+        .button {
+          display: flex;
+          align-items: flex-start;
+          border-radius: 12px;
+          background: #00000000;
+          padding-bottom: 16px;
+          padding-left: 12px;
+          width: 40px;
+          height: 52px;
+
+          .svg2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            background: #00000000;
+            height: 21px;
+
+            .frame2 {
+              flex-shrink: 0;
+              width: 16px;
+              height: 18px;
+              overflow: hidden;
+            }
+          }
+
+          .div {
+            margin-top: -4px;
+            margin-left: 4px;
+            border-radius: 9999px;
+            background: #f36523;
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+    }
+
+    .autoWrapper5 {
+      position: relative;
+      width: 375px;
+      height: 2922px;
+
+      .frame7 {
+        flex-shrink: 0;
+        width: 18px;
+        height: 20px;
+        overflow: hidden;
+      }
+
+      .frame6 {
+        flex-shrink: 0;
+        width: 23px;
+        height: 20px;
+        overflow: hidden;
+      }
+
+      .frame4 {
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+      }
+
+      .main {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        background: #edf4fa;
+        padding-bottom: 96px;
+        width: 375px;
+        height: 2922px;
+
+        .section {
+          position: relative;
+          width: 375px;
+          height: 328px;
+          overflow: hidden;
+          background-image: linear-gradient(
+            48.82deg,
+            #f36523 48.05%,
+            #ff7a47 118.76%
+          );
+
+          .div4 {
+            position: absolute;
+            top: -64px;
+            left: 311px;
+            border-radius: 9999px;
+            background: #ffffff1a;
+            width: 128px;
+            height: 128px;
+          }
+
+          .div5 {
+            position: absolute;
+            top: 280px;
+            left: -48px;
+            border-radius: 9999px;
+            background: #ffffff1a;
+            width: 96px;
+            height: 96px;
+          }
+
+          .div7 {
+            display: flex;
+            position: absolute;
+            top: 40px;
+            left: 16px;
+            flex-direction: column;
+            align-items: flex-start;
+            background: #00000000;
+            width: 343px;
+            height: 248px;
+
+            .encontrePeAsAutomoti {
+              width: 234px;
+              height: 72px;
+              line-height: 36px;
+              letter-spacing: 0;
+              color: #ffffff;
+              font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+              font-size: 30px;
+              font-weight: 700;
+            }
+
+            .comparePreOsEEconomi {
+              margin: 12px 0px 0px;
+              width: 337px;
+              height: 56px;
+              line-height: 28px;
+              letter-spacing: 0;
+              color: #ffffffe5;
+              font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+              font-size: 18px;
+            }
+
+            .div6 {
+              display: flex;
+              align-items: center;
+              align-self: stretch;
+              justify-content: space-between;
+              margin-top: 32px;
+              border-radius: 16px;
+              box-shadow: 0px 4px 6px 0px #0000000d, 0px 10px 25px 0px #0000001a;
+              background: #ffffff;
+              padding: 24px 63px 24px 16px;
+              min-width: 343px;
+              height: 76px;
+
+              .svg3 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #00000000;
+                padding-top: 4px;
+                padding-bottom: 6px;
+              }
+
+              .autoWrapper {
+                position: relative;
+                width: 234px;
+                height: 24px;
+
+                .buscarPeAsMarcas {
+                  display: flex;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  align-items: center;
+                  width: 234px;
+                  height: 24px;
+                  line-height: 24px;
+                  letter-spacing: 0;
+                  color: #adaebc;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 16px;
+                }
+
+                .button2 {
+                  display: flex;
+                  position: absolute;
+                  right: -47px;
+                  bottom: -10px;
+                  align-items: flex-start;
+                  border-radius: 12px;
+                  background: #f36523;
+                  padding: 13px 18px 11px 24px;
+                  width: 95px;
+                  height: 44px;
+
+                  .buscar {
+                    width: 53px;
+                    height: 20px;
+                    text-align: center;
+                    letter-spacing: 0;
+                    color: #ffffff;
+                    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                    font-size: 14px;
+                    font-weight: 600;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .section2 {
+          display: flex;
+          align-items: center;
+          align-self: stretch;
+          background: #00000000;
+          padding: 32px 16px;
+
+          .div10 {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            align-items: center;
+            border: 1px solid #f3f4f6;
+            border-radius: 24px;
+            box-shadow: 0px 4px 15px 0px #f3652314;
+            background: #ffffff;
+            padding: 24px;
+
+            .div8 {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              align-self: stretch;
+              background: #00000000;
+              padding-right: 13px;
+              padding-left: 20px;
+
+              .svg4 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 86px;
+                border-radius: 9999px;
+                background: #f365231a;
+                padding-top: 27px;
+                padding-bottom: 29px;
+                width: 80px;
+
+                .frame3 {
+                  flex-shrink: 0;
+                  width: 30px;
+                  height: 24px;
+                  overflow: hidden;
+                }
+              }
+
+              .faALoginOuCadastreSe {
+                margin: 16px 0px 0px;
+                width: 258px;
+                height: 28px;
+                text-align: center;
+                line-height: 28px;
+                letter-spacing: 0;
+                color: #0d2027;
+                font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                font-weight: 700;
+              }
+
+              .acesseSuaContaParaSo {
+                margin: 12px 0px 0px 8px;
+                width: 252px;
+                height: 52px;
+                text-align: center;
+                line-height: 26px;
+                letter-spacing: 0;
+                color: #0d2027b2;
+                font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                font-size: 16px;
+              }
+            }
+
+            .div9 {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              align-self: stretch;
+              margin-top: 24px;
+              background: #00000000;
+
+              .button3 {
+                display: flex;
+                align-items: flex-start;
+                align-self: stretch;
+                border-radius: 12px;
+                box-shadow: 0px 4px 6px 0px #0000001a,
+                  0px 10px 15px 0px #0000001a;
+                background: #f36523;
+                padding: 18px 118px 14px 123px;
+
+                .entrar {
+                  width: 52px;
+                  height: 24px;
+                  text-align: center;
+                  letter-spacing: 0;
+                  color: #ffffff;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 16px;
+                  font-weight: 600;
+                }
+              }
+
+              .button4 {
+                display: flex;
+                align-items: flex-start;
+                align-self: stretch;
+                margin-top: 16px;
+                border: 2px solid #f36523;
+                border-radius: 12px;
+                background: #00000000;
+                padding: 18px 96px 14px 102px;
+
+                .criarConta {
+                  width: 91px;
+                  height: 24px;
+                  text-align: center;
+                  letter-spacing: 0;
+                  color: #f36523;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 16px;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+
+        .section3 {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          align-self: stretch;
+          background: #00000000;
+          padding: 32px 16px;
+
+          .categorias {
+            width: 112px;
+            height: 28px;
+            line-height: 28px;
+            letter-spacing: 0;
+            color: #0d2027;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+          }
+
+          .div11 {
+            display: flex;
+            align-items: center;
+            align-self: stretch;
+            justify-content: space-between;
+            margin-top: 24px;
+            background: #00000000;
+            padding-right: 1px;
+            min-width: 343px;
+            height: 276px;
+
+            .svg5 {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 16px;
+              background: #f365231a;
+              width: 56px;
+              height: 56px;
+            }
+
+            .autoWrapper2 {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              align-self: stretch;
+
+              .button5 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-self: stretch;
+                border: 1px solid #f3f4f6;
+                border-radius: 16px;
+                box-shadow: 0px 4px 15px 0px #f3652314;
+                background: #ffffff;
+                padding: 20px;
+
+                .p {
+                  display: flex;
+                  align-items: flex-start;
+                  align-self: stretch;
+                  margin-top: 12px;
+                  background: #00000000;
+                  padding: 1px 5px 0px 11px;
+                  height: 20px;
+
+                  .motor {
+                    width: 46px;
+                    height: 20px;
+                    text-align: center;
+                    letter-spacing: 0;
+                    color: #0d2027;
+                    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                    font-size: 14px;
+                    font-weight: 600;
+                  }
+                }
+              }
+
+              .button6 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-self: stretch;
+                margin-top: 16px;
+                border: 1px solid #f3f4f6;
+                border-radius: 16px;
+                box-shadow: 0px 4px 15px 0px #f3652314;
+                background: #ffffff;
+                padding: 20px;
+
+                .svg6 {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 16px;
+                  background: #f365231a;
+                  width: 56px;
+                  height: 56px;
+
+                  .frame5 {
+                    flex-shrink: 0;
+                    width: 25px;
+                    height: 20px;
+                    overflow: hidden;
+                  }
+                }
+
+                .p2 {
+                  display: flex;
+                  align-items: flex-start;
+                  align-self: stretch;
+                  margin-top: 12px;
+                  background: #00000000;
+                  padding: 1px 6px 0px 11px;
+                  height: 20px;
+
+                  .aLeos {
+                    width: 44px;
+                    height: 20px;
+                    text-align: center;
+                    letter-spacing: 0;
+                    color: #0d2027;
+                    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                    font-size: 14px;
+                    font-weight: 600;
+                  }
+                }
+              }
+            }
+
+            .autoWrapper3 {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              align-self: stretch;
+
+              .button7 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-self: stretch;
+                border: 1px solid #f3f4f6;
+                border-radius: 16px;
+                box-shadow: 0px 4px 15px 0px #f3652314;
+                background: #ffffff;
+                padding: 20px;
+
+                .p3 {
+                  display: flex;
+                  align-items: flex-start;
+                  align-self: stretch;
+                  margin-top: 12px;
+                  background: #00000000;
+                  padding: 1px 5px 0px 10px;
+                  height: 20px;
+
+                  .freios {
+                    width: 47px;
+                    height: 20px;
+                    text-align: center;
+                    letter-spacing: 0;
+                    color: #0d2027;
+                    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                    font-size: 14px;
+                    font-weight: 600;
+                  }
+                }
+              }
+
+              .button8 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-self: stretch;
+                margin-top: 16px;
+                border: 1px solid #f3f4f6;
+                border-radius: 16px;
+                box-shadow: 0px 4px 15px 0px #f3652314;
+                background: #ffffff;
+                padding: 20px;
+
+                .p4 {
+                  display: flex;
+                  align-items: flex-start;
+                  align-self: stretch;
+                  margin-top: 12px;
+                  background: #00000000;
+                  padding: 1px 4px 0px 10px;
+                  height: 20px;
+
+                  .pneus {
+                    width: 48px;
+                    height: 20px;
+                    text-align: center;
+                    letter-spacing: 0;
+                    color: #0d2027;
+                    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                    font-size: 14px;
+                    font-weight: 600;
+                  }
+                }
+              }
+            }
+
+            .autoWrapper4 {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              align-self: stretch;
+
+              .button9 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-self: stretch;
+                border: 1px solid #f3f4f6;
+                border-radius: 16px;
+                box-shadow: 0px 4px 15px 0px #f3652314;
+                background: #ffffff;
+                padding: 20px;
+
+                .svg7 {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 16px;
+                  background: #f365231a;
+                  width: 56px;
+                  height: 56px;
+                }
+
+                .p5 {
+                  display: flex;
+                  align-items: flex-start;
+                  margin-top: 12px;
+                  background: #00000000;
+                  padding-top: 1px;
+                  padding-left: 5px;
+                  width: 62px;
+                  height: 20px;
+
+                  .elTrica {
+                    width: 57px;
+                    height: 20px;
+                    text-align: center;
+                    letter-spacing: 0;
+                    color: #0d2027;
+                    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                    font-size: 14px;
+                    font-weight: 600;
+                  }
+                }
+              }
+
+              .button10 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-self: stretch;
+                margin-top: 16px;
+                border: 1px solid #f3f4f6;
+                border-radius: 16px;
+                box-shadow: 0px 4px 15px 0px #f3652314;
+                background: #ffffff;
+                padding: 20px;
+
+                .svg8 {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 16px;
+                  background: #f365231a;
+                  width: 56px;
+                  height: 56px;
+                }
+
+                .p6 {
+                  display: flex;
+                  align-items: flex-start;
+                  align-self: stretch;
+                  margin-top: 12px;
+                  background: #00000000;
+                  padding: 1px 9px 0px 15px;
+                  height: 20px;
+
+                  .mais {
+                    width: 38px;
+                    height: 20px;
+                    text-align: center;
+                    letter-spacing: 0;
+                    color: #0d2027;
+                    font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                    font-size: 14px;
+                    font-weight: 600;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .section4 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          align-self: stretch;
+          background: #00000000;
+          padding: 32px 16px;
+
+          .div12 {
+            display: flex;
+            align-items: center;
+            align-self: stretch;
+            justify-content: space-between;
+            background: #00000000;
+            min-width: 343px;
+            height: 28px;
+
+            .produtosEmDestaque {
+              width: 223px;
+              height: 28px;
+              line-height: 28px;
+              letter-spacing: 0;
+              color: #0d2027;
+              font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+              font-size: 20px;
+              font-weight: 700;
+            }
+
+            .button11 {
+              display: flex;
+              align-items: flex-start;
+              background: #00000000;
+              padding-top: 1px;
+              width: 65px;
+              height: 20px;
+
+              .verTodos {
+                width: 66px;
+                height: 20px;
+                text-align: center;
+                letter-spacing: 0;
+                color: #f36523;
+                font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                font-size: 14px;
+                font-weight: 600;
+              }
+            }
+          }
+
+          .div23 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-self: stretch;
+            margin-top: 24px;
+            background: #00000000;
+
+            .img {
+              border-radius: 12px;
+              width: 80px;
+              height: 80px;
+            }
+
+            .r8990 {
+              width: 81px;
+              height: 28px;
+              line-height: 28px;
+              letter-spacing: 0;
+              color: #0d2027;
+              font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+              font-size: 18px;
+              font-weight: 700;
+            }
+
+            .button12 {
+              display: flex;
+              align-items: center;
+              border-radius: 12px;
+              background: #f36523;
+              padding: 8px 10px 8px 16px;
+
+              .cotar {
+                width: 38px;
+                height: 16px;
+                text-align: center;
+                letter-spacing: 0;
+                color: #ffffff;
+                font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                font-weight: 600;
+              }
+            }
+
+            .div18 {
+              display: flex;
+              align-items: center;
+              align-self: stretch;
+              justify-content: space-between;
+              margin-top: 12px;
+              background: #00000000;
+              min-width: 205px;
+              height: 52px;
+
+              .div17 {
+                display: flex;
+                align-items: flex-start;
+                background: #00000000;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                width: 141px;
+
+                .r3500 {
+                  margin: 5px 0px 0px 12px;
+                  width: 58px;
+                  height: 41px;
+                  line-height: 16px;
+                  letter-spacing: 0;
+                  color: #0d202780;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 12px;
+                  text-decoration: line-through;
+                }
+              }
+            }
+
+            .div16 {
+              display: flex;
+              align-items: flex-start;
+              align-self: stretch;
+              justify-content: space-between;
+              border: 1px solid #f3f4f6;
+              border-radius: 16px;
+              box-shadow: 0px 4px 15px 0px #f3652314;
+              background: #ffffff;
+              padding: 20px;
+              min-width: 343px;
+
+              .div15 {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                background: #00000000;
+
+                .pastilhaDeFreioDiant {
+                  width: 202px;
+                  height: 24px;
+                  line-height: 24px;
+                  letter-spacing: 0;
+                  color: #0d2027;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 16px;
+                  font-weight: 600;
+                }
+
+                .hondaCivic20122016 {
+                  margin: 4px 0px 0px;
+                  width: 137px;
+                  height: 16px;
+                  line-height: 16px;
+                  letter-spacing: 0;
+                  color: #0d202799;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 12px;
+                }
+
+                .div14 {
+                  display: flex;
+                  align-items: center;
+                  align-self: stretch;
+                  justify-content: space-between;
+                  margin-top: 12px;
+                  background: #00000000;
+                  min-width: 205px;
+                  height: 52px;
+
+                  .div13 {
+                    display: flex;
+                    align-items: flex-start;
+                    background: #00000000;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    width: 141px;
+
+                    .r12000 {
+                      margin: 5px 0px 0px 12px;
+                      width: 64px;
+                      height: 41px;
+                      line-height: 16px;
+                      letter-spacing: 0;
+                      color: #0d202780;
+                      font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                      font-size: 12px;
+                      text-decoration: line-through;
+                    }
+                  }
+                }
+              }
+            }
+
+            .div20 {
+              display: flex;
+              align-items: flex-start;
+              align-self: stretch;
+              justify-content: space-between;
+              margin-top: 16px;
+              border: 1px solid #f3f4f6;
+              border-radius: 16px;
+              box-shadow: 0px 4px 15px 0px #f3652314;
+              background: #ffffff;
+              padding: 20px;
+              min-width: 343px;
+
+              .div19 {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                background: #00000000;
+
+                .filtroDeLeo {
+                  width: 108px;
+                  height: 24px;
+                  line-height: 24px;
+                  letter-spacing: 0;
+                  color: #0d2027;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 16px;
+                  font-weight: 600;
+                }
+
+                .universal {
+                  margin: 4px 0px 0px;
+                  width: 58px;
+                  height: 16px;
+                  line-height: 16px;
+                  letter-spacing: 0;
+                  color: #0d202799;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 12px;
+                }
+              }
+            }
+
+            .div22 {
+              display: flex;
+              align-items: flex-start;
+              align-self: stretch;
+              justify-content: space-between;
+              margin-top: 16px;
+              border: 1px solid #f3f4f6;
+              border-radius: 16px;
+              box-shadow: 0px 4px 15px 0px #f3652314;
+              background: #ffffff;
+              padding: 20px;
+              min-width: 343px;
+
+              .div21 {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                background: #00000000;
+
+                .aLeoMotor5W30 {
+                  width: 142px;
+                  height: 24px;
+                  line-height: 24px;
+                  letter-spacing: 0;
+                  color: #0d2027;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 16px;
+                  font-weight: 600;
+                }
+
+                .sintTico1L {
+                  margin: 4px 0px 0px;
+                  width: 70px;
+                  height: 16px;
+                  line-height: 16px;
+                  letter-spacing: 0;
+                  color: #0d202799;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+
+        .section5 {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          align-self: stretch;
+          background: #00000000;
+          padding: 32px 16px;
+
+          .marcasPopulares {
+            width: 181px;
+            height: 28px;
+            line-height: 28px;
+            letter-spacing: 0;
+            color: #0d2027;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+          }
+
+          .div24 {
+            display: flex;
+            align-items: center;
+            align-self: stretch;
+            justify-content: space-between;
+            margin-top: 24px;
+            background: #00000000;
+            min-width: 343px;
+            height: 110px;
+
+            .img2 {
+              border-radius: 12px;
+              width: 40px;
+              height: 48px;
+            }
+
+            .button13 {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              border: 1px solid #f3f4f6;
+              border-radius: 16px;
+              box-shadow: 0px 4px 15px 0px #f3652314;
+              background: #ffffff;
+              padding: 16px;
+
+              .p7 {
+                display: flex;
+                align-items: center;
+                align-self: stretch;
+                margin-top: 12px;
+                background: #00000000;
+                padding-right: 1px;
+                padding-left: 2px;
+
+                .bosch {
+                  width: 37px;
+                  height: 16px;
+                  text-align: center;
+                  letter-spacing: 0;
+                  color: #0d2027;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 12px;
+                  font-weight: 600;
+                }
+              }
+            }
+
+            .button14 {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              border: 1px solid #f3f4f6;
+              border-radius: 16px;
+              box-shadow: 0px 4px 15px 0px #f3652314;
+              background: #ffffff;
+              padding: 16px;
+
+              .p8 {
+                display: flex;
+                align-items: center;
+                margin-top: 12px;
+                background: #00000000;
+                padding-left: 4px;
+                width: 40px;
+
+                .mann {
+                  width: 38px;
+                  height: 16px;
+                  text-align: center;
+                  letter-spacing: 0;
+                  color: #0d2027;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 12px;
+                  font-weight: 600;
+                }
+              }
+            }
+
+            .button15 {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              border: 1px solid #f3f4f6;
+              border-radius: 16px;
+              box-shadow: 0px 4px 15px 0px #f3652314;
+              background: #ffffff;
+              padding: 16px;
+
+              .p9 {
+                display: flex;
+                align-items: center;
+                align-self: stretch;
+                margin-top: 12px;
+                background: #00000000;
+                padding-right: 1px;
+                padding-left: 7px;
+
+                .nGk {
+                  width: 32px;
+                  height: 16px;
+                  text-align: center;
+                  letter-spacing: 0;
+                  color: #0d2027;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 12px;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+
+        .section6 {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          align-self: stretch;
+          background: #00000000;
+          padding: 32px 16px;
+
+          .comoFunciona {
+            width: 157px;
+            height: 28px;
+            line-height: 28px;
+            letter-spacing: 0;
+            color: #0d2027;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+          }
+
+          .div34 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-self: stretch;
+            margin-top: 24px;
+            background: #00000000;
+
+            .div27 {
+              display: flex;
+              align-items: flex-start;
+              align-self: stretch;
+              justify-content: space-between;
+              border: 1px solid #f3f4f6;
+              border-radius: 16px;
+              box-shadow: 0px 4px 15px 0px #f3652314;
+              background: #ffffff;
+              padding: 20px;
+              min-width: 343px;
+
+              .div25 {
+                display: flex;
+                align-items: flex-start;
+                border-radius: 9999px;
+                box-shadow: 0px 4px 6px 0px #0000001a,
+                  0px 10px 15px 0px #0000001a;
+                background: #f36523;
+                padding: 11px 8px 9px 14px;
+
+                .a1 {
+                  width: 12px;
+                  height: 20px;
+                  letter-spacing: 0;
+                  color: #ffffff;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 14px;
+                  font-weight: 700;
+                }
+              }
+
+              .div26 {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                background: #00000000;
+                padding-right: 2px;
+
+                .soliciteUmaCotaO {
+                  width: 169px;
+                  height: 24px;
+                  line-height: 24px;
+                  letter-spacing: 0;
+                  color: #0d2027;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 16px;
+                  font-weight: 600;
+                }
+
+                .envieFotoDaPeAOuDesc {
+                  margin: 8px 0px 0px;
+                  width: 250px;
+                  height: 46px;
+                  line-height: 23px;
+                  letter-spacing: 0;
+                  color: #0d2027b2;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 14px;
+                }
+              }
+            }
+
+            .div30 {
+              display: flex;
+              align-items: flex-start;
+              align-self: stretch;
+              justify-content: space-between;
+              margin-top: 16px;
+              border: 1px solid #f3f4f6;
+              border-radius: 16px;
+              box-shadow: 0px 4px 15px 0px #f3652314;
+              background: #ffffff;
+              padding: 20px 31px 20px 20px;
+              min-width: 343px;
+
+              .div28 {
+                display: flex;
+                align-items: flex-start;
+                border-radius: 9999px;
+                box-shadow: 0px 4px 6px 0px #0000001a,
+                  0px 10px 15px 0px #0000001a;
+                background: #f36523;
+                padding: 11px 10px 9px 16px;
+
+                .a2 {
+                  width: 14px;
+                  height: 20px;
+                  letter-spacing: 0;
+                  color: #ffffff;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 14px;
+                  font-weight: 700;
+                }
+              }
+
+              .div29 {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                background: #00000000;
+                width: 234px;
+
+                .comparePreOs {
+                  width: 134px;
+                  height: 24px;
+                  line-height: 24px;
+                  letter-spacing: 0;
+                  color: #0d2027;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 16px;
+                  font-weight: 600;
+                }
+
+                .recebaCotaEsDeLojasP {
+                  margin: 8px 0px 0px;
+                  width: 234px;
+                  height: 23px;
+                  line-height: 23px;
+                  letter-spacing: 0;
+                  color: #0d2027b2;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 14px;
+                }
+              }
+            }
+
+            .div33 {
+              display: flex;
+              align-items: flex-start;
+              align-self: stretch;
+              justify-content: space-between;
+              margin-top: 16px;
+              border: 1px solid #f3f4f6;
+              border-radius: 16px;
+              box-shadow: 0px 4px 15px 0px #f3652314;
+              background: #ffffff;
+              padding: 20px;
+              min-width: 343px;
+
+              .div31 {
+                display: flex;
+                align-items: flex-start;
+                border-radius: 9999px;
+                box-shadow: 0px 4px 6px 0px #0000001a,
+                  0px 10px 15px 0px #0000001a;
+                background: #f36523;
+                padding: 11px 9px 9px 15px;
+
+                .a3 {
+                  width: 15px;
+                  height: 20px;
+                  letter-spacing: 0;
+                  color: #ffffff;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 14px;
+                  font-weight: 700;
+                }
+              }
+
+              .div32 {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                background: #00000000;
+                padding-right: 27px;
+
+                .finalizeACompra {
+                  width: 143px;
+                  height: 24px;
+                  line-height: 24px;
+                  letter-spacing: 0;
+                  color: #0d2027;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 16px;
+                  font-weight: 600;
+                }
+
+                .escolhaAMelhorOferta {
+                  margin: 8px 0px 0px;
+                  width: 220px;
+                  height: 46px;
+                  line-height: 23px;
+                  letter-spacing: 0;
+                  color: #0d2027b2;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+
+        .section7 {
+          display: flex;
+          align-items: center;
+          align-self: stretch;
+          background: #00000000;
+          padding: 32px 16px;
+
+          .div37 {
+            position: relative;
+            border-radius: 24px;
+            box-shadow: 0px 4px 6px 0px #0000000d, 0px 10px 25px 0px #0000001a;
+            background: #0d2027;
+            width: 343px;
+            height: 276px;
+            overflow: hidden;
+
+            .div35 {
+              position: absolute;
+              top: -40px;
+              left: 303px;
+              border-radius: 9999px;
+              background: #ffffff1a;
+              width: 80px;
+              height: 80px;
+            }
+
+            .div36 {
+              display: flex;
+              position: absolute;
+              top: 32px;
+              left: 32px;
+              flex-direction: column;
+              align-items: flex-start;
+              background: #00000000;
+              padding-right: 3px;
+              padding-left: 8px;
+              width: 279px;
+              height: 212px;
+
+              .prontoParaEconomizar {
+                margin: 0px 0px 0px 63px;
+                width: 158px;
+                height: 64px;
+                text-align: center;
+                line-height: 32px;
+                letter-spacing: 0;
+                color: #ffffff;
+                font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                font-size: 24px;
+                font-weight: 700;
+              }
+
+              .cadastreSeAgoraECome {
+                margin: 12px 0px 0px;
+                width: 268px;
+                height: 56px;
+                text-align: center;
+                line-height: 28px;
+                letter-spacing: 0;
+                color: #ffffffcc;
+                font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                font-size: 18px;
+              }
+
+              .button16 {
+                display: flex;
+                align-items: flex-start;
+                align-self: stretch;
+                margin: 24px 38px 0px 32px;
+                border-radius: 12px;
+                box-shadow: 0px 4px 6px 0px #0000001a,
+                  0px 10px 15px 0px #0000001a;
+                background: #f36523;
+                padding: 18px 27px 14px 32px;
+
+                .criarContaGrTis {
+                  width: 139px;
+                  height: 24px;
+                  text-align: center;
+                  letter-spacing: 0;
+                  color: #ffffff;
+                  font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+                  font-size: 16px;
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .div38 {
+        display: flex;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        align-items: center;
+        justify-content: space-between;
+        border-width: 1px 0px 0px;
+        border-style: solid;
+        border-color: #f3f4f6;
+        box-shadow: 0px 4px 6px 0px #0000000d, 0px 10px 25px 0px #0000001a;
+        background: #ffffff;
+        padding: 12px 32px;
+        width: 375px;
+        height: 89px;
+
+        .button17 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background: #00000000;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          width: 31px;
+
+          .svg9 {
+            display: flex;
+            align-items: center;
+            align-self: stretch;
+            justify-content: center;
+            margin-right: 4px;
+            margin-left: 4px;
+            background: #00000000;
+            height: 28px;
+          }
+
+          .inCio {
+            margin: 4px 0px 0px;
+            width: 32px;
+            height: 16px;
+            text-align: center;
+            line-height: 16px;
+            letter-spacing: 0;
+            color: #f36523;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+          }
+        }
+
+        .button18 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background: #00000000;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          width: 40px;
+
+          .svg10 {
+            display: flex;
+            align-items: center;
+            align-self: stretch;
+            justify-content: center;
+            margin-right: 10px;
+            margin-left: 10px;
+            background: #00000000;
+            height: 28px;
+          }
+
+          .buscar2 {
+            margin: 4px 0px 0px;
+            width: 40px;
+            height: 16px;
+            text-align: center;
+            line-height: 16px;
+            letter-spacing: 0;
+            color: #0d202780;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+          }
+        }
+
+        .button19 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background: #00000000;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          width: 31px;
+
+          .svg11 {
+            display: flex;
+            align-items: center;
+            align-self: stretch;
+            justify-content: center;
+            margin-right: 6px;
+            margin-left: 6px;
+            background: #00000000;
+            height: 28px;
+          }
+
+          .cotar2 {
+            margin: 4px 0px 0px;
+            width: 32px;
+            height: 16px;
+            text-align: center;
+            line-height: 16px;
+            letter-spacing: 0;
+            color: #0d202780;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+          }
+        }
+
+        .button20 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background: #00000000;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          width: 52px;
+
+          .svg12 {
+            display: flex;
+            align-items: center;
+            align-self: stretch;
+            justify-content: center;
+            margin-right: 16px;
+            margin-left: 16px;
+            background: #00000000;
+            height: 28px;
+          }
+
+          .favoritos {
+            margin: 4px 0px 0px;
+            width: 53px;
+            height: 16px;
+            text-align: center;
+            line-height: 16px;
+            letter-spacing: 0;
+            color: #0d202780;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+          }
+        }
+
+        .button21 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background: #00000000;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          width: 34px;
+
+          .svg13 {
+            display: flex;
+            align-items: center;
+            align-self: stretch;
+            justify-content: center;
+            margin-right: 8px;
+            margin-left: 8px;
+            background: #00000000;
+            height: 28px;
+          }
+
+          .entrar2 {
+            margin: 4px 0px 0px;
+            width: 35px;
+            height: 16px;
+            text-align: center;
+            line-height: 16px;
+            letter-spacing: 0;
+            color: #0d202780;
+            font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

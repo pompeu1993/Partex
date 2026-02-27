@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+.div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-width: 1px 0px 0px;
+  border-style: solid;
+  border-color: #f3f4f6;
+  box-shadow: 0px 4px 6px 0px #0000000d, 0px 10px 25px 0px #0000001a;
+  background: #ffffff;
+  padding: 12px 32px;
+  width: 375px;
+  height: 89px;
+
+  .frame2 {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+  }
+
+  .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #00000000;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 31px;
+
+    .svg {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      justify-content: center;
+      margin-right: 4px;
+      margin-left: 4px;
+      background: #00000000;
+      height: 28px;
+
+      .frame {
+        flex-shrink: 0;
+        width: 23px;
+        height: 20px;
+        overflow: hidden;
+      }
+    }
+
+    .inCio {
+      margin: 4px 0px 0px;
+      width: 32px;
+      height: 16px;
+      text-align: center;
+      line-height: 16px;
+      letter-spacing: 0;
+      color: #f36523;
+      font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  .button2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #00000000;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 40px;
+
+    .svg2 {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      justify-content: center;
+      margin-right: 10px;
+      margin-left: 10px;
+      background: #00000000;
+      height: 28px;
+    }
+
+    .buscar {
+      margin: 4px 0px 0px;
+      width: 40px;
+      height: 16px;
+      text-align: center;
+      line-height: 16px;
+      letter-spacing: 0;
+      color: #0d202780;
+      font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 12px;
+    }
+  }
+
+  .button3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #00000000;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 31px;
+
+    .svg3 {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      justify-content: center;
+      margin-right: 6px;
+      margin-left: 6px;
+      background: #00000000;
+      height: 28px;
+    }
+
+    .cotar {
+      margin: 4px 0px 0px;
+      width: 32px;
+      height: 16px;
+      text-align: center;
+      line-height: 16px;
+      letter-spacing: 0;
+      color: #0d202780;
+      font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 12px;
+    }
+  }
+
+  .button4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #00000000;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 52px;
+
+    .svg4 {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      justify-content: center;
+      margin-right: 16px;
+      margin-left: 16px;
+      background: #00000000;
+      height: 28px;
+    }
+
+    .favoritos {
+      margin: 4px 0px 0px;
+      width: 53px;
+      height: 16px;
+      text-align: center;
+      line-height: 16px;
+      letter-spacing: 0;
+      color: #0d202780;
+      font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 12px;
+    }
+  }
+
+  .button5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #00000000;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 34px;
+
+    .svg5 {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      justify-content: center;
+      margin-right: 8px;
+      margin-left: 8px;
+      background: #00000000;
+      height: 28px;
+
+      .frame3 {
+        flex-shrink: 0;
+        width: 18px;
+        height: 20px;
+        overflow: hidden;
+      }
+    }
+
+    .entrar {
+      margin: 4px 0px 0px;
+      width: 35px;
+      height: 16px;
+      text-align: center;
+      line-height: 16px;
+      letter-spacing: 0;
+      color: #0d202780;
+      font-family: Inter, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+      font-size: 12px;
+    }
+  }
+}
