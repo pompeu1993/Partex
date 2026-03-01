@@ -249,6 +249,11 @@ O projeto PARTEX será executado estritamente em duas fases sequenciais para gar
 
 **Tecnologias foco**: Supabase, Pagar.me API, PostgreSQL, Redis (cache)
 
+**Integração WebMCP (Fase 2.1)**:
+- Implementação do servidor MCP para comunicação segura
+- Configuração de endpoints padronizados para ferramentas de IA
+- Integração com serviços de contexto e memória
+
 ### 5.2 Critérios de Transição entre Fases
 
 A transição da Fase 1 para Fase 2 ocorrerá apenas após:
@@ -296,6 +301,27 @@ A transição da Fase 1 para Fase 2 ocorrerá apenas após:
 5. **Entrega Contínua**: Frontend funcional pode ser demonstrado mesmo com dados mockados
 
 ## 6. Histórico de Atualizações
+
+### 28 de Fevereiro de 2026 - Sprint de UX, Unificação e Refatoração Admin
+
+**Experiência do Usuário (UX) e Layout:**
+- **Páginas de Detalhes**: Reestruturação completa do layout de Detalhes de Produtos e Serviços para desktop. Informações do vendedor e lista de avaliações movidas para a coluna da esquerda (abaixo da galeria), otimizando a leitura e conversão.
+- **Sistema de Avaliações**: Implementação de avaliações dinâmicas com mock data, incluindo notas por estrelas, iniciais do autor e data da publicação.
+- **Menu Mobile/Tablet**: Correção crítica de visibilidade em tablets. Implementação de menu hambúrguer para telas menores e ajuste de breakpoint desktop para `1024px (lg)`.
+
+**Unificação de Funcionalidades:**
+- **Busca Centralizada**: Desativação da página `/services` isolada. Unificação total da busca de produtos e serviços na rota `/search`, utilizando filtros dinâmicos por tipo.
+- **Categorias Dinâmicas**: Migração de categorias estáticas para dinâmicas (via Supabase), com suporte a empty states e carregamento em tempo real na Home e nos filtros de busca.
+
+**Painel Administrativo e Backend:**
+- **Gestão de Usuários**: Correção na listagem de usuários para exibir e-mails reais. Criação de SQL View (`profiles_with_email`) no Supabase para realizar JOIN seguro entre os schemas `auth` e `public`.
+- **Configurações em Abas**: Refatoração da página de configurações (`/settings`) utilizando sistema de Tabs (Personalização, LGPD, etc.) para melhor organização.
+- **Pagamentos (Pagar.me)**: Simplificação do módulo de adquirentes, mantendo foco exclusivo no Pagar.me. Adição de modal de configuração seguro para chaves de API e seleção de ambiente (Sandbox/Produção).
+
+**Banco de Dados (Migrations):**
+- Migrations para categorias comuns do setor automotivo.
+- Migration para View de perfis com e-mail.
+- Refatoração de tabelas de provedores de pagamento.
 
 ### 26 de Fevereiro de 2026 - Sprint de Otimização e Features Avançadas
 
@@ -350,4 +376,21 @@ A transição da Fase 1 para Fase 2 ocorrerá apenas após:
 - Home page com busca e categorias
 - Services page com listagem de serviços
 - ProductDetails com galeria de imagens
-- Estrutura inicial dos dashboards por tipo de usuário
+-375→- ProductDetails com galeria de imagens
+376→- Estrutura inicial dos dashboards por tipo de usuário
+377→
+378→### Março de 2026 - WebMCP e Atualizações de Segurança
+379→
+380→**Infraestrutura e Segurança:**
+381→- **WebMCP Integration**: Implementação do protocolo WebMCP para comunicação padronizada e segura entre cliente e servidor, facilitando a escalabilidade de microsserviços e integração com ferramentas de IA.
+382→- **Recuperação de Senha Segura**: Implementação completa do fluxo de "Esqueci minha senha" com envio de e-mails transacionais via Resend (com templates HTML profissionais) e geração de tokens seguros via Supabase Auth Admin.
+383→- **Rotas de API Backend**: Criação de servidor Express dedicado (`/api`) para lidar com operações sensíveis e integrações de terceiros, rodando em paralelo com o frontend Vite.
+384→
+385→**Experiência do Usuário (UX):**
+386→- **Novo Perfil de Usuário**: Redesign completo da página de perfil (`/dashboard/profile`) com layout moderno, responsivo e rico em informações (estatísticas, atalhos rápidos), alinhado com a identidade visual premium da plataforma.
+387→- **Navegação Otimizada**: Melhorias na Sidebar responsiva com botão de fechar em mobile e inclusão de acesso rápido ao perfil na navegação inferior (mobile bottom nav).
+388→- **Login UX**: Ajustes de layout na tela de login para melhor alinhamento de elementos ("Lembrar-me" e "Esqueci a senha").
+389→
+390→**Correções e Melhorias:**
+391→- Correção no comportamento do menu hambúrguer administrativo em dispositivos móveis e tablets.
+392→- Unificação de rotas de recuperação de senha e atualização de dependências.

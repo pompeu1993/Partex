@@ -37,7 +37,7 @@ export function Users() {
   const fetchUsers = async () => {
     try {
       const { data, error } = await supabase
-        .from("profiles")
+        .from("profiles_with_email")
         .select("*")
         .order("created_at", { ascending: false });
 
@@ -350,6 +350,9 @@ export function Users() {
                           <div className="flex items-center gap-1 text-xs text-gray-500">
                             <Mail className="h-3 w-3" />
                             {user.email || "Email não disponível"}
+                          </div>
+                          <div className="text-[10px] text-gray-400 mt-0.5">
+                            ID: {user.id.slice(0, 8)}
                           </div>
                         </div>
                       </div>

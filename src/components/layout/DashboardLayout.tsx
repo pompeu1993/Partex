@@ -14,7 +14,7 @@ export function DashboardLayout({ children, userType }: DashboardLayoutProps) {
   const { profile, user } = useAuth();
 
   return (
-    <div className={`min-h-screen flex bg-gray-50 ${userType === 'admin' ? 'min-w-[1370px] overflow-x-auto' : ''}`}>
+    <div className="min-h-screen flex bg-gray-50">
       {/* Mobile Sidebar Overlay */}
       {isSidebarOpen && (
         <div
@@ -29,7 +29,7 @@ export function DashboardLayout({ children, userType }: DashboardLayoutProps) {
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <Sidebar userType={userType} />
+        <Sidebar userType={userType} onClose={() => setIsSidebarOpen(false)} />
       </div>
 
       {/* Main Content */}

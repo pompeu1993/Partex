@@ -7,7 +7,7 @@ const items = [
   { to: "/search", label: "Buscar", Icon: Search, match: (p: string) => p.startsWith("/search") },
   { to: "/quotes", label: "Cotar", Icon: PlusCircle, match: (p: string) => p.startsWith("/quotes") },
   { to: "/favorites", label: "Favoritos", Icon: Heart, match: (p: string) => p.startsWith("/favorites") },
-  { to: "/login", label: "Entrar", Icon: User, match: (p: string) => p.startsWith("/login") },
+  { to: "/dashboard/profile", label: "Perfil", Icon: User, match: (p: string) => p.startsWith("/dashboard") || p.startsWith("/login") },
 ];
 
 export function MobileBottomNav() {

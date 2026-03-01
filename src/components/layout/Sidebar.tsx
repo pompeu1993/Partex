@@ -15,13 +15,15 @@ import {
   DollarSign,
   HelpCircle,
   Layers,
+  X
 } from "lucide-react";
 
 interface SidebarProps {
   userType: "customer" | "mechanic" | "shop" | "admin";
+  onClose?: () => void;
 }
 
-export function Sidebar({ userType }: SidebarProps) {
+export function Sidebar({ userType, onClose }: SidebarProps) {
   const location = useLocation();
   const navigate = useNavigate();
   const { signOut } = useAuth();
@@ -70,9 +72,9 @@ export function Sidebar({ userType }: SidebarProps) {
   const items = menuItems[userType] || menuItems.customer;
 
   return (
-    <aside className="w-64 bg-dark text-white hidden md:flex flex-col h-screen sticky top-0">
-      <div className="p-6">
-        <Link to="/" className="flex items-center gap-2">
+    <aside className="w-64 bg-dark text-white flex flex-col h-screen sticky top-0 overflow-y-auto">
+      <div className="p-6 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-2" onClick={onClose}>
           <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-white font-bold">
             P
           </div>
@@ -80,6 +82,11 @@ export function Sidebar({ userType }: SidebarProps) {
             PARTEX
           </span>
         </Link>
+        {onClose && (
+          <button onClick={onClose} className="md:hidden text-gray-400 hover:text-white">
+            <X className="h-6 w-6" />
+          </button>
+        )}
       </div>
 
       <nav className="flex-1 px-4 py-4 space-y-2">
@@ -89,6 +96,7 @@ export function Sidebar({ userType }: SidebarProps) {
             <Link
               key={item.href}
               to={item.href}
+              onClick={onClose}
               className={cn(
                 "flex items-center gap-3 px-4 py-3 rounded-md transition-colors",
                 isActive

@@ -39,6 +39,11 @@ const product = {
   condition: "Novo",
   category: "Motor",
   stock: 5,
+  reviewsList: [
+    { id: 1, author: "Carlos S.", initial: "C", date: "Há 2 dias", rating: 5, text: "Produto original, veio na caixa lacrada. Instalei no meu Gol G6 e ficou perfeito, embreagem macia novamente. Recomendo o vendedor!" },
+    { id: 2, author: "Marcos P.", initial: "M", date: "Há 1 semana", rating: 4, text: "Chegou rápido e bem embalado. A peça parece ser de ótima qualidade." },
+    { id: 3, author: "João F.", initial: "J", date: "Há 2 semanas", rating: 5, text: "Excelente custo-benefício. Meu mecânico elogiou a qualidade da peça." }
+  ]
 };
 
 export function ProductDetails() {
@@ -67,41 +72,115 @@ export function ProductDetails() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* Gallery Section */}
-          <div className="space-y-4">
-            <div className="aspect-video bg-white rounded-xl border overflow-hidden relative group">
-              <img
-                src={product.images[selectedImage]}
-                alt={product.name}
-                className="w-full h-full object-cover"
-              />
-              <button className="absolute top-4 right-4 p-2 bg-white/80 rounded-full hover:bg-white text-gray-600 hover:text-red-500 transition-colors">
-                <Heart className="h-5 w-5" />
-              </button>
-            </div>
-            <div className="grid grid-cols-4 gap-4">
-              {product.images.map((img, index) => (
-                <button
-                  key={index}
-                  onClick={() => setSelectedImage(index)}
-                  className={cn(
-                    "aspect-video rounded-lg overflow-hidden border-2 transition-all",
-                    selectedImage === index
-                      ? "border-primary ring-2 ring-primary/20"
-                      : "border-transparent hover:border-gray-300"
-                  )}
-                >
-                  <img
-                    src={img}
-                    alt={`View ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
+          {/* Left Column: Gallery, Seller Info, Reviews */}
+          <div className="space-y-8">
+            {/* Gallery Section */}
+            <div className="space-y-4">
+              <div className="aspect-video bg-white rounded-xl border overflow-hidden relative group">
+                <img
+                  src={product.images[selectedImage]}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                />
+                <button className="absolute top-4 right-4 p-2 bg-white/80 rounded-full hover:bg-white text-gray-600 hover:text-red-500 transition-colors">
+                  <Heart className="h-5 w-5" />
                 </button>
-              ))}
+              </div>
+              <div className="grid grid-cols-4 gap-4">
+                {product.images.map((img, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setSelectedImage(index)}
+                    className={cn(
+                      "aspect-video rounded-lg overflow-hidden border-2 transition-all",
+                      selectedImage === index
+                        ? "border-primary ring-2 ring-primary/20"
+                        : "border-transparent hover:border-gray-300"
+                    )}
+                  >
+                    <img
+                      src={img}
+                      alt={`View ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Seller Info Card */}
+            <div className="bg-white p-6 rounded-xl border space-y-4">
+              <h2 className="text-lg font-bold font-heading text-gray-900">Informações do Vendedor</h2>
+              <div className="flex items-center gap-4">
+                <div className="h-16 w-16 bg-gray-200 rounded-full flex items-center justify-center text-2xl font-bold text-gray-500">
+                  {product.seller.name.charAt(0)}
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-bold text-gray-900 flex items-center gap-2 text-lg">
+                    {product.seller.name}
+                    {product.seller.verified && (
+                      <CheckCircle className="h-5 w-5 text-blue-500 fill-blue-50" />
+                    )}
+                  </h3>
+                  <div className="flex items-center gap-2 text-sm mt-1">
+                    <div className="flex items-center text-yellow-500 font-medium">
+                      <Star className="h-4 w-4 fill-current mr-1" />
+                      {product.seller.rating}
+                    </div>
+                    <span className="text-gray-300">|</span>
+                    <span className="text-gray-600">{product.seller.reviews} avaliações</span>
+                  </div>
+                  <p className="text-sm text-gray-500 mt-1 flex items-center gap-1">
+                    <MapPin className="h-4 w-4" />
+                    {product.seller.address} ({product.seller.distance})
+                  </p>
+                </div>
+                <Button variant="outline" size="sm">
+                  Ver Perfil
+                </Button>
+              </div>
+            </div>
+
+            {/* Reviews List */}
+            <div className="bg-white p-6 rounded-xl border space-y-6">
+              <h2 className="text-lg font-bold font-heading text-gray-900 flex items-center justify-between">
+                Avaliações do Produto
+                <span className="text-sm font-normal text-gray-500">Ver todas</span>
+              </h2>
+              
+              <div className="space-y-6">
+                {product.reviewsList.map((review) => (
+                  <div key={review.id} className="border-b pb-6 last:border-0 last:pb-0">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center gap-2">
+                        <div className="h-8 w-8 bg-gray-100 rounded-full flex items-center justify-center text-sm font-bold text-gray-600">
+                          {review.initial}
+                        </div>
+                        <span className="font-medium text-gray-900">{review.author}</span>
+                      </div>
+                      <span className="text-sm text-gray-500">{review.date}</span>
+                    </div>
+                    <div className="flex items-center text-yellow-500 mb-2">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={cn(
+                            "h-4 w-4 fill-current",
+                            i >= review.rating && "text-gray-300 fill-none"
+                          )}
+                        />
+                      ))}
+                    </div>
+                    <p className="text-gray-600 text-sm">
+                      {review.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Info Section */}
+          {/* Right Column: Info Section */}
           <div className="space-y-6">
             <div>
               <div className="flex justify-between items-start">
@@ -192,27 +271,6 @@ export function ProductDetails() {
                   <span>Garantia de 90 dias direto com o vendedor</span>
                 </div>
               </div>
-            </div>
-
-            {/* Seller Info Card */}
-            <div className="bg-white p-4 rounded-xl border flex items-center gap-4">
-              <div className="h-12 w-12 bg-gray-200 rounded-full flex items-center justify-center text-lg font-bold text-gray-500">
-                {product.seller.name.charAt(0)}
-              </div>
-              <div className="flex-1">
-                <h3 className="font-bold text-gray-900 flex items-center gap-2">
-                  {product.seller.name}
-                  {product.seller.verified && (
-                    <CheckCircle className="h-4 w-4 text-blue-500 fill-blue-50" />
-                  )}
-                </h3>
-                <p className="text-sm text-gray-500">
-                  {product.seller.address}
-                </p>
-              </div>
-              <Button variant="ghost" size="sm">
-                Ver Perfil
-              </Button>
             </div>
 
             {/* Description */}

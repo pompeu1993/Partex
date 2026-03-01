@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate, useLocation as useRouterLocation } from "react-router-dom";
-import { ShoppingCart, User, Bell, MapPin, Search, ChevronDown, LogOut, LayoutDashboard, Crosshair, Check } from "lucide-react";
+import { ShoppingCart, User, Bell, MapPin, Search, ChevronDown, LogOut, LayoutDashboard, Crosshair, Check, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/contexts/AuthContext";
@@ -11,6 +11,7 @@ export function Header() {
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
   const [locationOpen, setLocationOpen] = useState(false);
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const { user, profile, signOut, isAdmin } = useAuth();
   const { settings } = useSiteSettings();
@@ -159,7 +160,7 @@ export function Header() {
         </div>
 
         {/* Desktop Navigation - Centered but hidden on smaller screens */}
-        <nav className="hidden xl:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
+        <nav className="hidden lg:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
           <Link 
             to="/" 
             className={cn(
@@ -350,8 +351,119 @@ export function Header() {
               </Button>
             </Link>
           )}
+
+          {/* Mobile Menu Button */}
+          <Button
+            variant="ghost"
+            size="icon"
+            className="lg:hidden text-gray-600"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </Button>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 top-16 bg-white z-40 animate-in slide-in-from-right duration-300">
+          <nav className="flex flex-col p-4 gap-2">
+            <Link 
+              to="/" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={cn(
+                "p-4 text-lg font-medium rounded-xl transition-colors",
+                isActive("/") ? "bg-orange-50 text-primary font-bold" : "hover:bg-gray-50"
+              )}
+            >
+              Home
+            </Link>
+            <Link 
+              to="/search" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={cn(
+                "p-4 text-lg font-medium rounded-xl transition-colors",
+                isActive("/search") ? "bg-orange-50 text-primary font-bold" : "hover:bg-gray-50"
+              )}
+            >
+              Busca
+            </Link>
+            <Link 
+              to="/quotes" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={cn(
+                "p-4 text-lg font-medium rounded-xl transition-colors",
+                isActive("/quotes") ? "bg-orange-50 text-primary font-bold" : "hover:text-primary"
+              )}
+            >
+              Cotar
+            </Link>
+            <Link 
+              to="/favorites" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={cn(
+                "p-4 text-lg font-medium rounded-xl transition-colors",
+                isActive("/favorites") ? "bg-orange-50 text-primary font-bold" : "hover:bg-gray-50"
+              )}
+            >
+              Favoritos
+            </Link>
+            <a
+              href="https://partex.company/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="p-4 text-lg font-medium rounded-xl hover:bg-gray-50 transition-colors"
+            >
+              Sobre
+            </a>
+
+            {!user && (
+              <div className="mt-4 p-4">
+                <Link to="/login" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-full py-6 text-lg font-bold">
+                    Entrar / Cadastrar
+                  </Button>
+                </Link>
+              </div>
+            )}
+
+            {user && (
+               <div className="mt-4 p-4 border-t border-gray-100">
+                 <div className="flex items-center gap-4 mb-6 p-2">
+                    <div className="h-12 w-12 bg-gradient-to-br from-primary to-orange-600 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-sm">
+                      {profile?.full_name?.charAt(0) || user.email?.charAt(0).toUpperCase()}
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900">{profile?.full_name || "Usuário"}</p>
+                      <p className="text-sm text-gray-500">{user.email}</p>
+                    </div>
+                 </div>
+                 <div className="space-y-2">
+                    <Link 
+                      to={isAdmin ? "/admin" : "/dashboard"}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="flex items-center gap-3 p-4 text-lg font-medium text-gray-700 hover:bg-gray-50 rounded-xl"
+                    >
+                      <LayoutDashboard className="h-5 w-5" />
+                      Painel do {isAdmin ? "Admin" : "Usuário"}
+                    </Link>
+                    <button
+                      onClick={() => {
+                        handleSignOut();
+                        setIsMobileMenuOpen(false);
+                      }}
+                      className="w-full flex items-center gap-3 p-4 text-lg font-medium text-red-600 hover:bg-red-50 rounded-xl"
+                    >
+                      <LogOut className="h-5 w-5" />
+                      Sair
+                    </button>
+                 </div>
+               </div>
+            )}
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

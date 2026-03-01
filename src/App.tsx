@@ -13,6 +13,7 @@ import { ProductDetails } from "@/pages/ProductDetails";
 import { ServiceDetails } from "@/pages/ServiceDetails";
 import { Cart } from "@/pages/Cart";
 import { Dashboard } from "@/pages/dashboard/Dashboard";
+import { Profile } from "@/pages/dashboard/Profile";
 import { AdminDashboard } from "@/pages/admin/AdminDashboard";
 import { Categories as AdminCategories } from "@/pages/admin/Categories";
 import { Settings as AdminSettings } from "@/pages/admin/Settings";
@@ -28,6 +29,8 @@ import { Favorites } from "@/pages/Favorites";
 import { Terms } from "@/pages/Terms";
 import { Privacy } from "@/pages/Privacy";
 import { Register } from "@/pages/Register";
+import { ForgotPassword } from "@/pages/ForgotPassword";
+import { ResetPassword } from "@/pages/ResetPassword";
 
 function AppRoutes() {
   const { user, loading } = useAuth();
@@ -58,6 +61,22 @@ function AppRoutes() {
           element={
             <ProtectedRoute>
               <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard/settings"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dashboard/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
             </ProtectedRoute>
           }
         />
@@ -135,6 +154,8 @@ function AppRoutes() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/quotes" element={<Quotes />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/terms" element={<Terms />} />

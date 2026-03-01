@@ -38,6 +38,11 @@ const service = {
   },
   category: "Óleos",
   estimatedTime: "45 min",
+  reviewsList: [
+    { id: 1, author: "Roberto M.", initial: "R", date: "Há 3 dias", rating: 5, text: "Serviço excelente! O mecânico foi muito atencioso, explicou tudo o que estava fazendo e ainda deu dicas de manutenção. Recomendo." },
+    { id: 2, author: "Ana L.", initial: "A", date: "Há 2 semanas", rating: 4, text: "Atendimento rápido e preço justo. Só achei que a sala de espera poderia ser um pouco mais confortável." },
+    { id: 3, author: "Paulo T.", initial: "P", date: "Há 1 mês", rating: 5, text: "Troca de óleo rápida e sem sujeira. Voltarei com certeza." }
+  ]
 };
 
 export function ServiceDetails() {
@@ -65,44 +70,118 @@ export function ServiceDetails() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* Gallery Section */}
-          <div className="space-y-4">
-            <div className="aspect-video bg-white rounded-xl border overflow-hidden relative group">
-              <img
-                src={service.images[selectedImage]}
-                alt={service.name}
-                className="w-full h-full object-cover"
-              />
-              <button className="absolute top-4 right-4 p-2 bg-white/80 rounded-full hover:bg-white text-gray-600 hover:text-red-500 transition-colors">
-                <Heart className="h-5 w-5" />
-              </button>
-              <div className="absolute top-4 left-4 bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm flex items-center gap-1">
-                <Wrench className="h-3 w-3" /> Serviço
+          {/* Left Column: Gallery, Seller Info, Reviews */}
+          <div className="space-y-8">
+            {/* Gallery Section */}
+            <div className="space-y-4">
+              <div className="aspect-video bg-white rounded-xl border overflow-hidden relative group">
+                <img
+                  src={service.images[selectedImage]}
+                  alt={service.name}
+                  className="w-full h-full object-cover"
+                />
+                <button className="absolute top-4 right-4 p-2 bg-white/80 rounded-full hover:bg-white text-gray-600 hover:text-red-500 transition-colors">
+                  <Heart className="h-5 w-5" />
+                </button>
+                <div className="absolute top-4 left-4 bg-primary/90 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm flex items-center gap-1">
+                  <Wrench className="h-3 w-3" /> Serviço
+                </div>
+              </div>
+              <div className="grid grid-cols-4 gap-4">
+                {service.images.map((img, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setSelectedImage(index)}
+                    className={cn(
+                      "aspect-video rounded-lg overflow-hidden border-2 transition-all",
+                      selectedImage === index
+                        ? "border-primary ring-2 ring-primary/20"
+                        : "border-transparent hover:border-gray-300"
+                    )}
+                  >
+                    <img
+                      src={img}
+                      alt={`View ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
+                ))}
               </div>
             </div>
-            <div className="grid grid-cols-4 gap-4">
-              {service.images.map((img, index) => (
-                <button
-                  key={index}
-                  onClick={() => setSelectedImage(index)}
-                  className={cn(
-                    "aspect-video rounded-lg overflow-hidden border-2 transition-all",
-                    selectedImage === index
-                      ? "border-primary ring-2 ring-primary/20"
-                      : "border-transparent hover:border-gray-300"
-                  )}
-                >
-                  <img
-                    src={img}
-                    alt={`View ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </button>
-              ))}
+
+            {/* Seller Info Card */}
+            <div className="bg-white p-6 rounded-xl border space-y-4">
+              <h2 className="text-lg font-bold font-heading text-gray-900">Informações do Prestador</h2>
+              <div className="flex items-center gap-4">
+                <div className="h-16 w-16 bg-gray-200 rounded-full flex items-center justify-center text-2xl font-bold text-gray-500">
+                  {service.seller.name.charAt(0)}
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-bold text-gray-900 flex items-center gap-2 text-lg">
+                    {service.seller.name}
+                    {service.seller.verified && (
+                      <CheckCircle className="h-5 w-5 text-blue-500 fill-blue-50" />
+                    )}
+                  </h3>
+                  <div className="flex items-center gap-2 text-sm mt-1">
+                    <div className="flex items-center text-yellow-500 font-medium">
+                      <Star className="h-4 w-4 fill-current mr-1" />
+                      {service.seller.rating}
+                    </div>
+                    <span className="text-gray-300">|</span>
+                    <span className="text-gray-600">{service.seller.reviews} avaliações</span>
+                  </div>
+                  <p className="text-sm text-gray-500 mt-1 flex items-center gap-1">
+                    <MapPin className="h-4 w-4" />
+                    {service.seller.address} ({service.seller.distance})
+                  </p>
+                </div>
+                <Button variant="outline" size="sm">
+                  Ver Perfil
+                </Button>
+              </div>
+            </div>
+
+            {/* Reviews List */}
+            <div className="bg-white p-6 rounded-xl border space-y-6">
+              <h2 className="text-lg font-bold font-heading text-gray-900 flex items-center justify-between">
+                Avaliações do Serviço
+                <span className="text-sm font-normal text-gray-500">Ver todas</span>
+              </h2>
+              
+              <div className="space-y-6">
+                {service.reviewsList.map((review) => (
+                  <div key={review.id} className="border-b pb-6 last:border-0 last:pb-0">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center gap-2">
+                        <div className="h-8 w-8 bg-gray-100 rounded-full flex items-center justify-center text-sm font-bold text-gray-600">
+                          {review.initial}
+                        </div>
+                        <span className="font-medium text-gray-900">{review.author}</span>
+                      </div>
+                      <span className="text-sm text-gray-500">{review.date}</span>
+                    </div>
+                    <div className="flex items-center text-yellow-500 mb-2">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={cn(
+                            "h-4 w-4 fill-current",
+                            i >= review.rating && "text-gray-300 fill-none"
+                          )}
+                        />
+                      ))}
+                    </div>
+                    <p className="text-gray-600 text-sm">
+                      {review.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Info Section */}
+          {/* Right Column: Info Section */}
           <div className="space-y-6">
             <div>
               <div className="flex justify-between items-start">
@@ -168,27 +247,6 @@ export function ServiceDetails() {
                   <span>Profissionais verificados e avaliados</span>
                 </div>
               </div>
-            </div>
-
-            {/* Seller Info Card */}
-            <div className="bg-white p-4 rounded-xl border flex items-center gap-4">
-              <div className="h-12 w-12 bg-gray-200 rounded-full flex items-center justify-center text-lg font-bold text-gray-500">
-                {service.seller.name.charAt(0)}
-              </div>
-              <div className="flex-1">
-                <h3 className="font-bold text-gray-900 flex items-center gap-2">
-                  {service.seller.name}
-                  {service.seller.verified && (
-                    <CheckCircle className="h-4 w-4 text-blue-500 fill-blue-50" />
-                  )}
-                </h3>
-                <p className="text-sm text-gray-500">
-                  {service.seller.address}
-                </p>
-              </div>
-              <Button variant="ghost" size="sm">
-                Ver Perfil
-              </Button>
             </div>
 
             {/* Description */}

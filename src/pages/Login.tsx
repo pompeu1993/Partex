@@ -191,8 +191,8 @@ export function Login() {
               />
               <span className="text-sm text-gray-600">Lembrar-me</span>
             </label>
-            <Link to="/forgot-password" className="text-sm font-medium text-orange-500 hover:text-orange-600">
-              Esqueci a senha
+            <Link to="/forgot-password" title="Esqueceu a senha?" className="text-sm font-medium text-primary hover:underline transition-colors">
+              Esqueceu a senha?
             </Link>
           </div>
 
