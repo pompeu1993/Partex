@@ -69,7 +69,7 @@ export function Profile() {
               </button>
             </div>
 
-            <h2 className="text-2xl md:text-3xl font-bold font-heading text-center">
+            <h2 className="text-2xl md:text-3xl font-bold font-heading text-center text-white">
               {profile?.full_name || user?.email}
             </h2>
             <p className="text-gray-300 text-sm md:text-base mb-6 text-center capitalize">
