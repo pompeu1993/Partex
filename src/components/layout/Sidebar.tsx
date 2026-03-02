@@ -15,6 +15,7 @@ import {
   DollarSign,
   HelpCircle,
   Layers,
+  Activity,
   X
 } from "lucide-react";
 
