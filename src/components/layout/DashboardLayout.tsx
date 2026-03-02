@@ -3,6 +3,7 @@ import { Sidebar } from "./Sidebar";
 import { Button } from "@/components/ui/Button";
 import { Menu, X, Bell, User } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
+import { useSiteSettings } from "@/contexts/SiteSettingsContext";
 
 interface DashboardLayoutProps {
   children: ReactNode;
@@ -12,6 +13,7 @@ interface DashboardLayoutProps {
 export function DashboardLayout({ children, userType }: DashboardLayoutProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { profile, user } = useAuth();
+  const { settings } = useSiteSettings();
 
   return (
     <div className="min-h-screen flex bg-gray-50">
@@ -45,7 +47,9 @@ export function DashboardLayout({ children, userType }: DashboardLayoutProps) {
             >
               <Menu className="h-6 w-6" />
             </Button>
-            <h1 className="text-xl font-heading font-bold md:hidden">PARTEX</h1>
+            <h1 className="text-xl font-heading font-bold md:hidden">
+              {settings?.site_info?.name || "PARTEX"}
+            </h1>
           </div>
 
           <div className="flex items-center gap-4">

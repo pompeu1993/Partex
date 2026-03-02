@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/contexts/AuthContext";
+import { useSiteSettings } from "@/contexts/SiteSettingsContext";
 import {
   LayoutDashboard,
   Package,
@@ -28,6 +29,7 @@ export function Sidebar({ userType, onClose }: SidebarProps) {
   const location = useLocation();
   const navigate = useNavigate();
   const { signOut } = useAuth();
+  const { settings } = useSiteSettings();
 
   const handleSignOut = async () => {
     await signOut();
@@ -77,11 +79,19 @@ export function Sidebar({ userType, onClose }: SidebarProps) {
     <aside className="w-64 bg-[#1A242B] text-white flex flex-col h-screen md:sticky md:top-0 overflow-y-auto">
       <div className="p-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2" onClick={onClose}>
-          <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-white font-bold">
-            P
-          </div>
+          {settings?.site_info?.logo_url ? (
+            <img 
+              src={settings.site_info.logo_url} 
+              alt={settings.site_info.name || "Logo"} 
+              className="h-8 w-8 object-contain rounded bg-white p-0.5" 
+            />
+          ) : (
+            <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-white font-bold">
+              {settings?.site_info?.name?.charAt(0) || "P"}
+            </div>
+          )}
           <span className="text-xl font-heading font-bold text-white">
-            PARTEX
+            {settings?.site_info?.name || "PARTEX"}
           </span>
         </Link>
         {onClose && (
