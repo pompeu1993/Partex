@@ -97,17 +97,24 @@ export function Orders() {
             />
           </div>
           <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0">
-            {['all', 'pending', 'paid', 'shipped', 'delivered', 'cancelled'].map((status) => (
+            {[
+              { id: 'all', label: 'Todos' },
+              { id: 'pending', label: 'Pendente' },
+              { id: 'paid', label: 'Pago' },
+              { id: 'shipped', label: 'Enviado' },
+              { id: 'delivered', label: 'Entregue' },
+              { id: 'cancelled', label: 'Cancelado' }
+            ].map((status) => (
               <button
-                key={status}
-                onClick={() => setStatusFilter(status)}
+                key={status.id}
+                onClick={() => setStatusFilter(status.id)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-colors ${
-                  statusFilter === status 
+                  statusFilter === status.id 
                     ? 'bg-primary text-white' 
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
-                {status === 'all' ? 'Todos' : status.charAt(0).toUpperCase() + status.slice(1)}
+                {status.label}
               </button>
             ))}
           </div>
