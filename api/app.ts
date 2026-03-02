@@ -32,6 +32,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }))
  */
 app.use('/api/auth', authRoutes)
 app.use('/api/mcp', mcpRoutes)
+app.use('/api/deploy', deployRoutes)
 
 /**
  * health

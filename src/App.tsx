@@ -14,6 +14,19 @@ import { ServiceDetails } from "@/pages/ServiceDetails";
 import { Cart } from "@/pages/Cart";
 import { Dashboard } from "@/pages/dashboard/Dashboard";
 import { Profile } from "@/pages/dashboard/Profile";
+import { Orders } from "@/pages/dashboard/Orders";
+import { Vehicles } from "@/pages/dashboard/Vehicles";
+import { Products } from "@/pages/dashboard/Products";
+import { Services } from "@/pages/dashboard/Services";
+import { Schedule } from "@/pages/dashboard/Schedule";
+import { Sales } from "@/pages/dashboard/Sales";
+import { Notifications } from "@/pages/dashboard/Notifications";
+import { ProfileSettings } from "@/pages/dashboard/settings/ProfileSettings";
+import { BankSettings } from "@/pages/dashboard/settings/BankSettings";
+import { NotificationSettings } from "@/pages/dashboard/settings/NotificationSettings";
+import { Marketing } from "@/pages/dashboard/tools/Marketing";
+import { Support } from "@/pages/dashboard/support/Support";
+import { DashboardPlaceholder } from "@/pages/dashboard/Placeholder";
 import { AdminDashboard } from "@/pages/admin/AdminDashboard";
 import { Categories as AdminCategories } from "@/pages/admin/Categories";
 import { Settings as AdminSettings } from "@/pages/admin/Settings";
@@ -23,6 +36,7 @@ import { Products as AdminProducts } from "@/pages/admin/Products";
 import { Users as AdminUsers } from "@/pages/admin/Users";
 import { Payments as AdminPayments } from "@/pages/admin/Payments";
 import { Support as AdminSupport } from "@/pages/admin/Support";
+import { DeployLogs } from "@/pages/admin/DeployLogs";
 import { Login } from "@/pages/Login";
 import { Quotes } from "@/pages/Quotes";
 import { Favorites } from "@/pages/Favorites";
@@ -31,6 +45,7 @@ import { Privacy } from "@/pages/Privacy";
 import { Register } from "@/pages/Register";
 import { ForgotPassword } from "@/pages/ForgotPassword";
 import { ResetPassword } from "@/pages/ResetPassword";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 
 function AppRoutes() {
   const { user, loading } = useAuth();
@@ -80,6 +95,26 @@ function AppRoutes() {
             </ProtectedRoute>
           }
         />
+        {/* Feature Routes */}
+        <Route path="/dashboard/orders" element={<ProtectedRoute><Orders /></ProtectedRoute>} />
+        <Route path="/dashboard/vehicles" element={<ProtectedRoute><Vehicles /></ProtectedRoute>} />
+        <Route path="/dashboard/products" element={<ProtectedRoute><Products /></ProtectedRoute>} />
+        <Route path="/dashboard/services" element={<ProtectedRoute><Services /></ProtectedRoute>} />
+        <Route path="/dashboard/schedule" element={<ProtectedRoute><Schedule /></ProtectedRoute>} />
+        <Route path="/dashboard/sales" element={<ProtectedRoute><Sales /></ProtectedRoute>} />
+        <Route path="/dashboard/notifications" element={<ProtectedRoute><Notifications /></ProtectedRoute>} />
+        
+        {/* Settings Routes */}
+        <Route path="/dashboard/settings/profile" element={<ProtectedRoute><ProfileSettings /></ProtectedRoute>} />
+        <Route path="/dashboard/settings/bank" element={<ProtectedRoute><BankSettings /></ProtectedRoute>} />
+        <Route path="/dashboard/settings/notifications" element={<ProtectedRoute><NotificationSettings /></ProtectedRoute>} />
+        
+        {/* Tools Routes */}
+        <Route path="/dashboard/tools/marketing" element={<ProtectedRoute><Marketing /></ProtectedRoute>} />
+        
+        {/* Support Routes */}
+        <Route path="/dashboard/support" element={<ProtectedRoute><Support /></ProtectedRoute>} />
+
         <Route
           path="/admin"
           element={
@@ -152,6 +187,14 @@ function AppRoutes() {
             </ProtectedRoute>
           }
         />
+        <Route
+          path="/admin/deploy-logs"
+          element={
+            <ProtectedRoute requireAdmin={true}>
+              <DeployLogs />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
@@ -161,6 +204,7 @@ function AppRoutes() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
       </Routes>
+      <MobileBottomNav />
       <LocationModal />
     </>
   );

@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/Input";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { formatPrice } from "@/lib/utils";
 import { useAuth } from "@/contexts/AuthContext";
 import { useSiteSettings } from "@/contexts/SiteSettingsContext";
@@ -275,8 +274,6 @@ export function Home() {
           </section>
         </div>
       </main>
-
-      <MobileBottomNav />
 
       <div className="hidden md:block">
         <Footer />

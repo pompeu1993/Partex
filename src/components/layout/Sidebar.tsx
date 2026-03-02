@@ -65,6 +65,7 @@ export function Sidebar({ userType, onClose }: SidebarProps) {
       { icon: DollarSign, label: "Pagamentos", href: "/admin/payments" },
       { icon: HelpCircle, label: "Suporte", href: "/admin/support" },
       { icon: CreditCard, label: "Adquirentes", href: "/admin/acquirers" },
+      { icon: Activity, label: "Deploy Logs", href: "/admin/deploy-logs" },
       { icon: Settings, label: "Configurações", href: "/admin/settings" },
     ],
   };
@@ -72,7 +73,7 @@ export function Sidebar({ userType, onClose }: SidebarProps) {
   const items = menuItems[userType] || menuItems.customer;
 
   return (
-    <aside className="w-64 bg-dark text-white flex flex-col h-screen sticky top-0 overflow-y-auto">
+    <aside className="w-64 bg-[#1A242B] text-white flex flex-col h-screen md:sticky md:top-0 overflow-y-auto">
       <div className="p-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2" onClick={onClose}>
           <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-white font-bold">
